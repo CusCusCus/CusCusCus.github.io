@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasidate - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: #1e3a8a;
+    }
+
+    nav .nav-link {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    nav .nav-link:hover {
+      color: #3b82f6 !important;
+    }
+
+    .hero {
+      background: url('Background.jpg') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #3b82f6;
+      display: block;
+      margin: 0.5rem auto 2rem;
+      border-radius: 2px;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    /* เอฟเฟกต์ขยับ/เลื่อนเข้า */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      transition: transform 0.2s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Kasidate<span style="color:#3b82f6">Portfolio</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="content animate-fade">
+      <h1 class="display-4 fw-bold">KASIDATE <span style="color:#3b82f6">SAEAEUNG</span></h1>
+      <p class="lead">Hello, my name is Kasidate</p>
+      <p>Let me introduce myself.</p>
+      <a href="#about" class="btn btn-primary px-4 mt-3">About Me</a>
+    </div>
+  </header>
+
+  <section id="about" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title animate-fade">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4">
+          <img src="Me.jpg" alt="Me" class="img-fluid rounded-circle border border-4">
+        </div>
+        <div class="col-md-8 animate-fade">
+          <p><strong>ชื่อ-สกุล:</strong> กษิดิ์เดช แซ่อึ้ง</p>
+          <p><strong>ชื่อเล่น:</strong> กัส</p>
+          <p><strong>วันเกิด:</strong> 17 October 2003</p>
+          <p><strong>อายุ:</strong> 21</p>
+          <p><strong>มหาวิทยาลัย:</strong> มหาวิทยาลัยกรุงเทพ</p>
+          <p><strong>คณะ:</strong> เทคโนโลยีสารสนเทศ</p>
+          <p><strong>สาขา:</strong> วิทยาการคอมพิวเตอร์ (CS)</p>
+          <p><strong>GPA :</strong> 3.40</p>
+          <p><strong>Email:</strong> kasidate.saeaeung@gmail.com</p>
+          <p><strong>เบอร์โทร:</strong> 094-659-9112</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="section-title">My Work</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="CHre.png" class="card-img-top" alt="CHECK X">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHECK X</h5>
+              <p class="card-text">แอปพลิเคชันสำหรับการบันทึกข้อมูลสิ่งที่ทำในแต่ละวัน โดยโปรแกรมนี้ใช้ภาษาPython ในการพัฒนาและใช้ SQLite ในการสร้างฐานข้อมูล</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="aire.png" class="card-img-top" alt="ThaiFoodClassifier">
+            <div class="card-body text-center">
+              <h5 class="card-title">ThaiFoodClassifier</h5>
+              <p class="card-text">พัฒนาAIเพื่อใช้AIประมวลผลภาพ จำแนกประเภทของวัตถุต่างๆ จากรูปภาพได้อย่างแม่นยำใช้ในการจำแนกประเภทของอาหารไทย จำนวน 20 ชนิดโดยการใช้ CNN(MobileNet)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="bure.png" class="card-img-top" alt="BuSportShop">
+            <div class="card-body text-center">
+              <h5 class="card-title">BuSportShop</h5>
+              <p class="card-text">โปรแกรมระบบสั่งซื้อสินค้าที่มีฟังก์ชันในการเพิ่มรายการสินค้าในstockและเก็บบันทึกรายชื่อของผู้ผลิตและมีระบบที่ใช้ในการสร้างใบสั่งซื้อสินค้าที่จะเป็นการเรียกข้อมูลจากฐานข้อมูล (Database SQLite) ของstockสินค้าและรายชื่อSupplierเพื่อนำไปใช้สร้างใบสั่งซื้อสินค้าและในตัวโปรแกรมยังสามารถสั่งพิมพ์ใบสั่งซื้อสินค้าจากการเลือกจากตารางรายการสั่งซื้อ โดยโปรแกรมนี้ใช้ภาษาPython ในการพัฒนาและใช้ SQLite ในการสร้างฐานข้อมูล
+</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="BIre.png" class="card-img-top" alt="Twitch Analytics">
+            <div class="card-body text-center">
+              <h5 class="card-title">Twitch Analytics (Power BI)</h5>
+              <p class="card-text">วิเคราะห์ข้อมูลจาก Twitch.tv เพื่อแสดงแนวโน้มเกมหรือที่เนื้อหาที่ยอดนิยม วันและเวลาเเละเพื่อเข้าใจพฤติกรรมของผู้ใช้งาน</p>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="Figmare.png" class="card-img-top" alt="Twitch Analytics">
+            <div class="card-body text-center">
+              <h5 class="card-title">UI Design (Figma)</h5>
+              <p class="card-text">ออกเเบบหน้าจอ UI โดยใช้ Figma ในโปรเจคเพื่อพัฒนาแอปพลิเคชัน</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="section-title">Tools</h2>
+    <div class="row g-4 text-center">
+      
+      <!-- Programming Languages -->
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5>Programming</h5>
+          <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+            <div>
+              <img src="py1.png" width="40" alt="Python">
+              <div>Python</div>
+            </div>
+            <div>
+              <img src="Java.png" width="40" alt="Java">
+              <div>Java</div>
+            </div>
+            <div>
+              <img src="sqll.png" width="40" alt="SQL">
+              <div>SQL</div>
+            </div>
+            <div>
+              <img src="HTML.png" width="40" alt="HTML">
+              <div>HTML</div>
+            </div>
+            <div>
+              <img src="flu.png" width="40" alt="SQL">
+              <div>Flutter</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Software & Tools -->
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5>Software & Tools</h5>
+          <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+            <div>
+              <img src="vs.png" width="40" alt="VS Code">
+              <div>VS Code</div>
+            </div>
+            <div>
+              <img src="fig2.webp" width="40" alt="Figma">
+              <div>Figma</div>
+            </div>
+            <div>
+              <img src="word.png" width="40" alt="Word">
+              <div>Word</div>
+            </div>
+            <div>
+              <img src="PowerPoint.png" width="40" alt="PowerPoint">
+              <div>PowerPoint</div>
+            </div>
+            <div>
+              <img src="Bi.png" width="40" alt="Power BI">
+              <div>Power BI</div>
+            </div>
+            <div>
+              <img src="Mysql3.png" width="40" alt="MySQL">
+              <div>MySQL</div>
+            </div>
+            <div>
+              <img src="team.png" width="40" alt="Teams">
+              <div>Microsoft Teams</div>
+            </div>
+            <div>
+              <img src="Gpt.png" width="40" alt="ChatGPT">
+              <div>ChatGPT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Activities -->
+  <section id="activities" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title">Activities</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="Motoko.jpg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Motoko Coding Workshop</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="OIC.jpg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">OIC InsureTech Award</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="OIC2.jpg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">InsureTech Showcase</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="rew.jpg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">BU x KAIT Internship</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Contact</h2>
+      <p><strong><img src="Person.png" width="35" style="margin-right:10px;" /> Name:</strong> Kasidate Saeaeung</p>
+      <p><strong><img src="Gmail.png" width="30" style="margin-right:10px;" /> Gmail:</strong> kasidate.saeaeung@gmail.com</p>
+      <p><strong><img src="Phone.png" width="35" style="margin-right:10px;" /> Phone:</strong> 094-649-9112</p>
+      <p><a href="https://line.me/ti/p/QkuYZj25Tq" target="_blank" class="text-decoration-none text-dark">
+    <img src="LINE.webp" width="30" style="margin-right:10px;" alt="Line Icon" />
+    <strong>Line:</strong> focushh
+  </a>
+</p>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kasidate</p>
+  </footer>
+
+</body>
+</html>
+
